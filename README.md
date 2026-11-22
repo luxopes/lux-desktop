@@ -8,6 +8,26 @@
 > package manager. The supported and tested way to get this desktop is
 > **[LuxOS](https://luxos.lux-ai.cz)** itself.
 
+> [!NOTE]
+> **Why is this repository so small? Where is the code?** This repository only holds the
+> installer. The desktop itself is developed in **[LuxOS-Arch](https://github.com/luxopes/LuxOS-Arch)**,
+> in the same packages LuxOS uses, so there is one source of the code and no copy that drifts apart:
+>
+> - [`desktop-standalone/`](https://github.com/luxopes/LuxOS-Arch/tree/main/desktop-standalone) –
+>   build script, session, dependencies and what is left out for other distributions
+> - [`packages/luxos-desktop/`](https://github.com/luxopes/LuxOS-Arch/tree/main/packages/luxos-desktop) –
+>   the desktop: menu bar, Control Center, hub, widgets, Launchpad… (most of it in
+>   [LSL](https://lsl.lux-ai.cz), in `files/lsl/`)
+> - [`packages/luxos-themes/`](https://github.com/luxopes/LuxOS-Arch/tree/main/packages/luxos-themes),
+>   [`luxos-i18n/`](https://github.com/luxopes/LuxOS-Arch/tree/main/packages/luxos-i18n),
+>   [`luxos-text/`](https://github.com/luxopes/LuxOS-Arch/tree/main/packages/luxos-text),
+>   [`luxos-terminal/`](https://github.com/luxopes/LuxOS-Arch/tree/main/packages/luxos-terminal) –
+>   themes, translations, Text Editor and Terminal
+>
+> `install.sh` downloads only these folders (a sparse `git clone` of LuxOS-Arch, nothing else is
+> fetched or run), builds a native package from them on your computer and installs it with your
+> package manager. You can read everything it runs before running it.
+
 The desktop of [LuxOS](https://luxos.lux-ai.cz) for your own Linux distribution: menu bar,
 Dock, Launchpad, Control Center, widgets, hot corners, Emoji & Symbols, screenshots,
 notifications and the LuxOS settings – on top of Xfce, as an extra **"LuxOS Desktop"** session
