@@ -24,9 +24,12 @@
 >   [`luxos-terminal/`](https://github.com/luxopes/LuxOS-Arch/tree/main/packages/luxos-terminal) –
 >   themes, translations, Text Editor and Terminal
 >
-> `install.sh` downloads only these folders (a sparse `git clone` of LuxOS-Arch, nothing else is
-> fetched or run), builds a native package from them on your computer and installs it with your
-> package manager. You can read everything it runs before running it.
+> `install.sh` downloads only these folders of LuxOS-Arch (a sparse `git clone`) and builds a
+> native package from them on your computer. The build also downloads what the LuxOS packages are
+> built from – the [LSL](https://lsl.lux-ai.cz) compiler, the WhiteSur themes, rofi and the Unicode
+> emoji data – from the addresses in their `PKGBUILD`s, checked against fixed checksums or git
+> revisions. The package is then installed with your package manager (`dnf`/`pacman`). You can read
+> everything it runs before running it.
 
 The desktop of [LuxOS](https://luxos.lux-ai.cz) for your own Linux distribution: menu bar,
 Dock, Launchpad, Control Center, widgets, hot corners, Emoji & Symbols, screenshots,
